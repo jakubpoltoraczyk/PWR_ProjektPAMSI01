@@ -1,7 +1,7 @@
 #include "list.h"
 
 template <typename T>
-List<T>::List(): head(nullptr)
+List<T>::List(): head(nullptr), tail(nullptr)
 {
 
 }
@@ -17,6 +17,8 @@ void List<T>::add_front(const T & elem)
 {
     Node<T> * node = new Node<T> (elem);
     node->set_next(*head);
+    if(is_empty())
+        tail = node;
     head = node;
 }
 
@@ -26,4 +28,33 @@ void List<T>::remove_front()
     Node<T> * temp = head;
     head = head->get_next();
     delete temp;
+}
+
+template <typename T>
+void List<T>::add_end(const T & elem)
+{
+    Node<T> * node = new Node<T> (elem);
+    tail->set_next(*node);
+    tail = node;
+}
+
+template <typename T>
+bool List<T>::is_empty()const
+{
+    if(head == nullptr)
+        return true;
+    return false;
+}
+
+template <typename T>
+void List<T>::show_all()const
+{
+    Node<T> * node;
+    for(node = head; node->get_next() != nullptr; node = node->get_next())
+    {
+        double x = node->get_element();
+        std::cout << x << "->";
+    }
+    double x = node->get_element();
+    std::cout << x << "->NULLPTR" << std::endl;
 }

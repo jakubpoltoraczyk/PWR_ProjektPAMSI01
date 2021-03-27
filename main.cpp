@@ -3,12 +3,13 @@
 
 int main()
 {
-    List<double> lista = List<double>();
-    lista.add_front(5.6);
-    std::cout << lista.front() << std::endl;
-    lista.add_front(9.0);
-    std::cout << lista.front() << std::endl;
+    List<int> lista = List<int>();
+    lista.add_front(1);
+    lista.add_front(2);
+    lista.add_front(3);
+    lista.add_front(4);
+    lista.add_end(0);
     lista.remove_front();
-    std::cout << lista.front() << std::endl;
+    lista.show_all();
     return 0;
 }
