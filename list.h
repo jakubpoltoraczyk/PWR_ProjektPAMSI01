@@ -7,9 +7,10 @@
 template <typename T>
 class List
 {
-    private:
+    protected:
         Node<T> * head;
         Node<T> * tail;
+        int beb;
     public:
         List();
         const T & front()const;
