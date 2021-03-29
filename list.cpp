@@ -45,16 +45,3 @@ bool List<T>::is_empty()const
         return true;
     return false;
 }
-
-template <typename T>
-void List<T>::show_all()const
-{
-    Node<T> * node;
-    for(node = head; node->get_next() != nullptr; node = node->get_next())
-    {
-        double x = node->get_element();
-        std::cout << x << "->";
-    }
-    double x = node->get_element();
-    std::cout << x << "->NULLPTR" << std::endl;
-}

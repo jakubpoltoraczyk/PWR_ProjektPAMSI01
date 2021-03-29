@@ -17,7 +17,6 @@ class List
         void remove_front();
         void add_end(const T &);
         bool is_empty()const;
-        void show_all()const;
 };  
 
 #endif // LIST_H

@@ -1,15 +1,21 @@
 #include <iostream>
-#include "priority_list.h"
+#include "priority_queue.h"
 
 int main()
 {
-    PriorityList<int> object = PriorityList<int>();
-    object.add_by_priority(10);
-    object.add_by_priority(100);
-    object.add_by_priority(10);
-    object.add_by_priority(5);
-    object.add_by_priority(10000);
-    object.add_by_priority(450);
-    object.show_all();
+    PriorityQueue<int> kolejka;
+    int tab[10]{};
+    kolejka.enqueue(5);
+    kolejka.enqueue(10);
+    kolejka.enqueue(3);
+    kolejka.enqueue(25);
+    for(int i = 0; i < 10 && !kolejka.is_empty(); ++i)
+    {
+        tab[i] = kolejka.peek();
+        kolejka.dequeue();
+    }
+    for(auto & t: tab)
+        std::cout << t << " ";
+    std::cout << std::endl;
     return 0;
 }
