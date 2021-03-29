@@ -1,7 +1,7 @@
-#include "sequence.cpp"
-#include "list.cpp"
 #include "node.cpp"
+#include "list.cpp"
+#include "priority_list.cpp"
 
-template class Sequence<int>;
-template class List<int>;
 template class Node<int>;
+template class List<int>;
+template class PriorityList<int>;

@@ -10,7 +10,6 @@ class List
     protected:
         Node<T> * head;
         Node<T> * tail;
-        int beb;
     public:
         List();
         const T & front()const;
