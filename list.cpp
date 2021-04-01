@@ -33,9 +33,14 @@ void List<T>::remove_front()
 template <typename T>
 void List<T>::add_end(const T & elem)
 {
-    Node<T> * node = new Node<T> (elem);
-    tail->set_next(*node);
-    tail = node;
+    if(List<T>::is_empty())
+        List<T>::add_front(elem);
+    else
+    {
+        Node<T> * node = new Node<T> (elem);
+        tail->set_next(*node);
+        tail = node;
+    }
 }
 
 template <typename T>

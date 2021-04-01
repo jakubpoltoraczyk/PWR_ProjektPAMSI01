@@ -27,3 +27,15 @@ void PriorityList<T>::add_by_priority(const T & elem)
         node->set_next(*actual);
     }
 }
+
+template <typename T>
+void PriorityList<T>::add_front(const T & elem)
+{
+    PriorityList<T>::add_by_priority(elem);
+}
+
+template <typename T>
+void PriorityList<T>::add_end(const T & elem)
+{
+    PriorityList<T>::add_by_priority(elem);
+}

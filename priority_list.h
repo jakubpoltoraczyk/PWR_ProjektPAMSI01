@@ -6,9 +6,12 @@
 template <typename T>
 class PriorityList: public List<T>
 {
+    private:
+        void add_by_priority(const T &);
     public:
         PriorityList();
-        void add_by_priority(const T &);
+        virtual void add_front(const T &);
+        virtual void add_end(const T &);
 };
 
 #endif // PRIORITY_LIST_H

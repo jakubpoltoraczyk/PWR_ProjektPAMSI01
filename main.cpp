@@ -1,27 +1,50 @@
-#include <iostream>
 #include <string>
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include "queue.h"
 #include "pair.h"
-#include "priority_queue.h"
+
 
 int main()
 {
-    int size = 10, prior = 0;
-    std::string mess;
-    PriorityQueue<Pair<std::string>> kolejka;
-    for(int i = 0; i < size; ++i)
+    srand(time(0));
+    Queue<Pair<std::string>> JohnDevice(QueueType::Normal);
+    Queue<Pair<std::string>> AnnaDevice(QueueType::Priority);
+    Queue<Pair<std::string>> IntermediateDevice(QueueType::Normal);
+    std::string text;
+    std::cout << std::endl << "Urzadzenie Johna - wpisz tresc wiadomosci: " << std::endl;
+    for(int priority = 0; std::cin.peek() != '\n'; ++priority)
     {
-        std::cin >> mess;
-        std::cin.get();
-        std::cin >> prior;
-        std::cin.get();
-        kolejka.enqueue(Pair<std::string>(mess,prior));
+        std::cin >> text;
+        JohnDevice.enqueue(Pair<std::string>(text,priority));
     }
-    std::cout << "Rozmiar kolejki: " << kolejka.size() << std::endl;
-    while(kolejka.size())
+    bool add_to_AnnaDevice;
+    while(!JohnDevice.is_empty())
     {
-        Pair<std::string> temp;;
-        temp = kolejka.peek();
-        kolejka.dequeue();
+        Pair<std::string> temp = JohnDevice.peek();
+        JohnDevice.dequeue();
+        add_to_AnnaDevice = (std::rand()%2)+0;
+        if(add_to_AnnaDevice)
+        {
+            AnnaDevice.enqueue(temp);
+            IntermediateDevice.enqueue(temp);
+        }
+        else
+            JohnDevice.enqueue(temp);
+    }
+    std::cout << std::endl << "Urzadzenie posrednie - podglad wiadomosci: " << std::endl;
+    while(!IntermediateDevice.is_empty())
+    {
+        Pair<std::string> temp = IntermediateDevice.peek();
+        IntermediateDevice.dequeue();
+        std::cout << temp.get_message() << " ";
+    }
+    std::cout << std::endl << std::endl << "Urzadzenie Anny - odbior wiadomosci: " << std::endl;;
+    while(!AnnaDevice.is_empty())
+    {
+        Pair<std::string> temp = AnnaDevice.peek();
+        AnnaDevice.dequeue();
         std::cout << temp.get_message() << " ";
     }
     std::cout << std::endl;

@@ -13,9 +13,9 @@ class List
     public:
         List();
         const T & front()const;
-        void add_front(const T &);
+        virtual void add_front(const T &);
         void remove_front();
-        void add_end(const T &);
+        virtual void add_end(const T &);
         bool is_empty()const;
 };  
 

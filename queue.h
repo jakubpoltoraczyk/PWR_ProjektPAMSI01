@@ -1,16 +1,21 @@
-#ifndef PRIORITY_QUEUE_H
-#define PRIORITY_QUEUE_H
+#ifndef QUEUE_H
+#define QUEUE_H
 
+#include "list.h"
 #include "priority_list.h"
 
+enum QueueType {Normal, Priority};
+
 template <typename T>
-class PriorityQueue
+class Queue
 {
     private:
-        PriorityList<T> elements;
+        QueueType type;
+        List<T> * elements;
         int number_of_elements;
     public:
-        PriorityQueue();
+        explicit Queue(const QueueType &);
+        ~Queue();
         void enqueue(const T &);
         void dequeue();
         const T & peek()const;
@@ -18,4 +23,4 @@ class PriorityQueue
         int size()const;
 };
 
-#endif // PRIORITY_QUEUE_H
+#endif // QUEUE_H
