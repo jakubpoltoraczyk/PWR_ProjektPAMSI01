@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 #include "list.h"
 
 template <typename T>
@@ -46,5 +48,7 @@ void List<T>::add_end(const T & elem)
 template <typename T>
 bool List<T>::is_empty()const
 {
-    return head;
+    if(head == nullptr)
+        return true;
+    return false;
 }

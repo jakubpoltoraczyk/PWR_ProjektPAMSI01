@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Klasa szablonowa reprezentująca listę jednokierunkową - strukturę danych umożliwiającą przechowywanie danych w postaci kolejnych węzłów, gdzie przemieszczanie się po kolejnych
    elementach listy następuje tylko w jednym kierunku (od początku do końca listy). Interfejs klasy udostępnia możliwość dokonywania podstawowych operacji na tj. dodawnia elementów 
    na początek i koniec listy, a także usuwania elementów z początku listy. Dodatkową operacją udostępnioną w ramach interfejsu klasy jest możliwość sprawdzenia czy lista jest pusta.

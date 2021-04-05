@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 #include "node.h"
 
 template <typename T>

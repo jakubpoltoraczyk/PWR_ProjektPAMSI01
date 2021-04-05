@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Klasa szablonowa reprezentująca pojęcie obiektu składającego się z dwoch elementów: właściwego elementu oraz klucza określającego stopień ważności tego elementu (priorytet). 
    Interfejs udostępnia podstawowe operacje pobierania i zmiany wartości obu elementów, a także możliwość porównywania między sobą obiektów klasy realizowanego na podstawie
    porównywania wartości klucza danego obiektu. Element właściwy ze względu na zastosowanie szablonu może być dowolnego typu. */

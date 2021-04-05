@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Klasa szablonowa reprezentująca węzeł - struktura danych składająca się z elementu oraz wskaźnika na kolejny węzeł.
    Interfejs klasy udostępnia możliwość pobierania aktualnej i ustawiania nowej wartości zarówno elementu jak i wskaźnika na kolejny węzeł. 
    Dzięki zastosowaniu szablonu typ przechowywanego elementu może być dowolny. */

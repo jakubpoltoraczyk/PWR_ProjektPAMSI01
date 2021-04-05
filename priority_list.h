@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Klasa szablonowa reprezentująca posortowaną listę jednokierunkową - strukturę danych analogiczną dla zwykłej listy jednokierunkowej, z wyjątkiem faktu, że każdy element listy o danym
    kluczu (priorytecie) umieszczany jest pomiędzy elementem listy o niższym priorytecie oraz elementem listy o wyższym priorytecie. Interfejs klasy udostępnia identyczne operacje, jakie
    udostępnia zwykła lista jednokierunkowa, z tym że operacja dodawania elementu do listy (na początek lub koniec) oparta jest o nową prywatna metodą dodająca dany element na odpowiednim 

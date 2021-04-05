@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 #include "queue.h"
 
 template <typename T>
@@ -38,7 +40,9 @@ const T & Queue<T>::peek()const
 template <typename T>
 bool Queue<T>::is_empty()const
 {
-    return number_of_elements;
+    if(number_of_elements == 0)
+        return true;
+    return false;
 }
 
 template <typename T>

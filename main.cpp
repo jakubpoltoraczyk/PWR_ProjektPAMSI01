@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Program JohnAndAnna - symulacja wymiany wiadomości między Johnem i Anna, gdzie wiadomość Johna składa się z pewnej liczby pakietów, które w momencie wysłania wiadomości do Anny
    zostają wymieszane, natomiast urządzenie Anny po odebraniu wiadomości ustawia pakiety w odpowiedniej kolejnośi i wyświetla prawdziwą wiadomość od Johna */
 

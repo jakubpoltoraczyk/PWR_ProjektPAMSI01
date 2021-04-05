@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Plik jawnie tworzący wybrane szablony konieczne dla odpowiedniego działania programu JohnAndAnna */
 
 #include <string>

@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 /* Klasa szablonowa reprezentująca kolejkę (normalną opartą o zwykła listę jednokierunkową oraz priorytetową opartą o posortowaną listę jednokierunkową), czyli strukturę danych typu FIFO. 
    Interfejs klasy udostępnia możliwość wyboru typu kolejki, od którego zależne jest działanie niektórych metod klasy - zatem m.in. elementy kolejki priorytetowej będą ustawione względem 
    klucza, natomiast elementy zwykłej kolejki ustawione zostaną względem ich kolejności wstawienia do kolejki. Oprócz tego istnieje kilka dodatkowych metod umożliwiających wygodne 

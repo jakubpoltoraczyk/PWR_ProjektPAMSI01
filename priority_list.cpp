@@ -1,3 +1,5 @@
+/* Wykonano dnia 05.04.2021 - Jakub Półtoraczyk */
+
 #include "priority_list.h"
 #include <iostream>
 template <typename T>
