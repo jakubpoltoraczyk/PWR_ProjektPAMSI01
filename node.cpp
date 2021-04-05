@@ -27,5 +27,5 @@ void Node<T>::set_element(const T & elem)
 template <typename T>
 void Node<T>::set_next(Node<T> & node)
 {
-    next = &node;
+    next = &node; // ustawienie wskaźnika na kolejny węzeł adresem podanego węzła
 }

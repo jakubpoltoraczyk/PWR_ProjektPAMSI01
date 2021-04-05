@@ -4,15 +4,15 @@ template <typename T>
 Queue<T>::Queue(const QueueType & t): type(t), number_of_elements(0)
 {
     if(type == QueueType::Normal)
-        elements = new List<T>;
+        elements = new List<T>; // alokacja pamięci dla normalnej kolejki (poprzez alokację pamięci dla zwykłej listy jednokierunkowej)
     else
-        elements = new PriorityList<T>;
+        elements = new PriorityList<T>; // alokacja pamięci dla priorytetowej kolejki (poprzez alokację pamięci dla priorytetowej listy jednokierunkowej)
 }
 
 template <typename T>
 Queue<T>::~Queue()
 {
-    delete elements;
+    delete elements; // dealokacja pamięci listy jednokierunkowej (usunięcie pamięci przydzielonej dla wszystkich elementów kolejki)
 }
 
 template <typename T>
@@ -38,9 +38,7 @@ const T & Queue<T>::peek()const
 template <typename T>
 bool Queue<T>::is_empty()const
 {
-    if(number_of_elements == 0)
-        return true;
-    return false;
+    return number_of_elements;
 }
 
 template <typename T>

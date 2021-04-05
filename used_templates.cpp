@@ -1,3 +1,5 @@
+/* Plik jawnie tworzący wybrane szablony konieczne dla odpowiedniego działania programu JohnAndAnna */
+
 #include <string>
 #include "pair.cpp"
 #include "node.cpp"

@@ -1,7 +1,7 @@
 #include "pair.h"
 
 template <typename T>
-Pair<T>::Pair(): message(""), priority(0)
+Pair<T>::Pair(): message(), priority(0)
 {
 
 }
@@ -39,31 +39,23 @@ void Pair<T>::set_priority(int prior)
 template <typename T>
 bool Pair<T>::operator<(const Pair<T> & other)const
 {
-    if((*this).get_priority() < other.get_priority())
-        return true;
-    return false;
+    return get_priority() < other.get_priority();
 }
 
 template <typename T>
 bool Pair<T>::operator<=(const Pair<T> & other)const
 {
-    if((*this).get_priority() <= other.get_priority())
-        return true;
-    return false;
+    return get_priority() <= other.get_priority();
 }
 
 template <typename T>
 bool Pair<T>::operator>(const Pair<T> & other)const
 {
-    if((*this).get_priority() > other.get_priority())
-        return true;
-    return false;
+    return get_priority() > other.get_priority();
 }
 
 template <typename T>
 bool Pair<T>::operator>=(const Pair<T> & other)const
 {
-    if((*this).get_priority() >= other.get_priority())
-        return true;
-    return false;
+    return get_priority() >= other.get_priority();
 }
